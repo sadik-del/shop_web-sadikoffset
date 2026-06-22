@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing</title>
+<link rel="icon" type="image/png" href="printing.ico">
+
+
+<style>
+
+:root {
+  --primary: #2563eb;
+  --secondary: #22c55e;
+  --dark: #0f172a;
+  --light: #f8fafc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--light);
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+h2 {
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+
+ul {
+  line-height: 1.8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: var(--primary);
+  color: white;
+}
+
+.calculator select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.total {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* WhatsApp Button */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 18px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+@media(max-width:600px) {
+  header h1 {
+    font-size: 26px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Printing Service</h1>
+  <p>Minimum Order: 500 Copies | 1–3 Color Printing</p>
+</header>
+
+<section>
+
+<div class="card">
+  <h2>🖨️ Our Services</h2>
+  <ul>
+    <li>Bulk printing starting from <b>500 copies</b></li>
+    <li>Paper sizes: A4, A5, A3 (same price)</li>
+    <li>1 Color, 2 Color & 3 Color printing</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>💰 Pricing</h2>
+
+  <table>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+    </tr>
+
+    <tr>
+      <td>Paper (500 pages)</td>
+      <td>₹350</td>
+    </tr>
+
+    <tr>
+      <td>1 Color Printing</td>
+      <td>₹60</td>
+    </tr>
+
+    <tr>
+      <td>2 Color Printing</td>
+      <td>₹70</td>
+    </tr>
+
+    <tr>
+      <td>3 Color Printing</td>
+      <td>₹80</td>
+    </tr>
+  </table>
+</div>
+
+<div class="card calculator">
+  <h2>🧮 Price Calculator (500 Copies)</h2>
+
+  <label>Select Printing Colors:</label>
+
+  <select id="color" onchange="calculate()">
+    <option value="60">1 Color – ₹60</option>
+    <option value="70">2 Color – ₹70</option>
+    <option value="80">3 Color – ₹80</option>
+  </select>
+
+  <div class="total">
+    Total Price: ₹<span id="total">410</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>📞 Contact Us</h2>
+
+  <p>
+    📍 Address: Your Store Address <br><br>
+
+    📱 Phone / WhatsApp:<br><br>
+    +91 9137725698 <br>
+    +91 9819117256 <br><br>
+
+    ⏰ Time: 9 AM – 8 PM
+  </p>
+</div>
+
+</section>
+
+<footer>
+  © 2026 Bulk Paper Printing Service
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a class="whatsapp"
+href="https://wa.me/919137725698"
+target="_blank">
+💬
+</a>
+
+<script>
+
+function calculate() {
+  let paper = 350;
+  let print = parseInt(document.getElementById("color").value);
+
+  let total = paper + print;
+
+  document.getElementById("total").innerText = total;
+}
+
+</script>
+
+</body>
+</html>
