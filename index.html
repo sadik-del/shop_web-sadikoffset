@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sadik printers</title>
+
+<link rel="icon" type="image/jpeg" href="printing.jpeg">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+/* Header */
+
+header{
+    padding:60px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#111827,#1e293b);
+    border-bottom:2px solid #2563eb;
+}
+
+header h1{
+    font-size:50px;
+    margin-bottom:20px;
+    color:#60a5fa;
+}
+
+header p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    font-size:20px;
+    color:#cbd5e1;
+}
+
+/* Main Section */
+
+section{
+    padding:50px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+/* Buttons */
+
+.button-group{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+}
+
+button{
+    padding:16px 30px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    min-width:220px;
+    box-shadow:0 8px 20px rgba(37,99,235,0.3);
+}
+
+button:hover{
+    background:#1d4ed8;
+    transform:translateY(-4px);
+}
+
+/* Contact Section */
+
+.contact{
+    background:#111827;
+    padding:35px;
+    border-radius:18px;
+    border:1px solid #1e40af;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.contact h2{
+    margin-bottom:25px;
+    color:#60a5fa;
+    font-size:32px;
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:18px;
+    color:#e2e8f0;
+}
+
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.contact a:hover{
+    text-decoration:underline;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#020617;
+    color:#94a3b8;
+    margin-top:50px;
+    border-top:1px solid #1e293b;
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:34px;
+    }
+
+    header p{
+        font-size:16px;
+    }
+
+    button{
+        width:100%;
+    }
+
+    .contact h2{
+        font-size:26px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>🖨️ Sadik Printers</h1>
+
+    <p>
+        Professional offset printing and binding services in CSMT.<br>
+        High-quality printing with affordable pricing and fast delivery.
+    </p>
+
+</header>
+
+<section>
+
+    <div class="button-group">
+
+        <button onclick="window.location.href='printing.html'">
+            Printing Details
+        </button>
+
+        <button onclick="window.location.href='binding.html'">
+            Binding Details
+        </button>
+
+    </div>
+
+    <div class="contact">
+
+        <h2>📞 Contact Information</h2>
+
+        <p>📍 Location: CSMT, Mumbai</p>
+
+        <p>
+            📱 Phone:
+            <a href="tel:+919137725698">
+                +91 9137725698
+            </a>
+        </p>
+
+        <p>
+            📱 Alternate:
+            <a href="tel:+919819117256">
+                +91 9819117256
+            </a>
+        </p>
+
+        <p>
+            💬 WhatsApp:
+            <a href="https://wa.me/919137725698" target="_blank">
+                Chat Now
+            </a>
+        </p>
+
+        <p>⏰ Working Hours: 9 AM – 8 PM</p>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Sadik Printers | All Rights Reserved
+</footer>
+
+</body>
+</html>
